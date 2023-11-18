@@ -1,0 +1,11 @@
+<div class="btnAdd">
+    <button  mat-icon-button routerLink="/add-movie">
+        <mat-icon>add</mat-icon>
+    </button>
+    </div>
+<div *ngIf="movies.length==0">
+    <img class="text-center" width="300" src="https://cdn.pixabay.com/animation/2022/10/11/03/16/03-16-39-160_512.gif" alt="NoMovies">
+</div>
+<div class="card-grid">
+    <app-movie-card *ngFor="let m of movies" [movie]="m"></app-movie-card>
+</div>

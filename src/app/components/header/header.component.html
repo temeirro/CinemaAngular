@@ -1,0 +1,25 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button>
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span><a routerLink="/">Cinema</a></span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button routerLink="/">
+        <mat-icon>home</mat-icon>
+    </button>
+    <button mat-icon-button routerLink="/movies">
+        <mat-icon>movies</mat-icon>
+    </button>
+    <button mat-icon-button routerLink="/genres">
+        <mat-icon>stars</mat-icon>
+    </button>
+    <button mat-icon-button routerLink="/login">
+        <mat-icon>account_circle</mat-icon>
+    </button>
+    <button *ngIf="!accountService.isAuthorized()" class="logoutBtn" mat-icon-button routerLink="/signup">
+        <mat-icon>login</mat-icon>
+    </button>
+    <button *ngIf="accountService.isAuthorized()" class="logoutBtn" mat-icon-button (click)="logout()">
+        <mat-icon>logout</mat-icon>
+    </button>
+</mat-toolbar>

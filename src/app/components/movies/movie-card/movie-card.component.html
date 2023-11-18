@@ -1,0 +1,20 @@
+<mat-card class="movie-card">
+    <mat-card-header>
+      <div mat-card-avatar class="movie-header-image"></div>
+      <mat-card-title>{{movie.title}}</mat-card-title>
+      <mat-card-subtitle>{{genres?.join('/')}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src={{movie.imageUrl}} alt="Photo of {{movie.title}}">
+    <!-- <mat-card-content>
+      <p>
+      {{movie?.description}}
+      </p>
+    </mat-card-content>  -->
+    <mat-card-actions>
+      <button mat-button  [routerLink]="['/movie-details',movie.id]" >DETAILS</button>
+      <!-- <button mat-button [routerLink]="['/edit-movie',movie.id]">EDIT</button> -->
+      <button mat-raised-button color="primary" mat-button (click)="deleteMovie()">DELETE</button>
+      <!-- <button mat-button>SHARE</button> -->
+    </mat-card-actions>
+  </mat-card>
+  

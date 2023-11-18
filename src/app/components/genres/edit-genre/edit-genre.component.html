@@ -1,0 +1,21 @@
+<div class="text-center">
+    <form [formGroup]="genreForm" #f="ngForm" (ngSubmit)="editGenre()">
+        <div>
+            <mat-form-field>
+                <mat-label>Name</mat-label>
+                <input matInput type="text" value="{{genre?.name}}" placeholder="Genre Name" formControlName="name">
+            </mat-form-field>
+        </div>
+        <div *ngIf="genreForm?.get('name')?.invalid && 
+        (genreForm?.get('name')?.dirty || genreForm?.get('name')?.touched)">
+            <p>Please, enter more than 3 symbols for name of genre.</p>
+        </div>
+
+      
+        <div>
+            <button type="submit" [disabled]="f.invalid" mat-raised-button color="primary">Edit</button>
+        </div>
+    </form>
+
+  
+</div>

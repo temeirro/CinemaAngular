@@ -1,0 +1,23 @@
+<mat-card class="movie-card">
+    <mat-card-header>
+      <div mat-card-avatar class="movie-header-image"></div>
+      <mat-card-title style="color: black;">{{movie?.title}}</mat-card-title>
+      <mat-card-subtitle>{{genres?.join('/')}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image width="600" src={{movie?.imageUrl}} alt="Photo of {{movie?.title}}">
+    <mat-card-content class="content">
+      <h1>YEAR</h1>
+      <p>
+      {{movie?.year}}
+      </p>
+      <h1>DESCRIPTION</h1>
+      <p>
+      {{movie?.description}}
+      </p>
+      <h1>DURATION</h1>
+      <p>
+      {{movie?.duration}}
+      </p>
+    </mat-card-content>
+  </mat-card>
+  

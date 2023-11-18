@@ -1,0 +1,16 @@
+.movie-card{
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    color: white;
+}
+
+p,h1{
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
+}
+
+.content{
+    width: 50%;
+}

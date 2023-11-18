@@ -1,0 +1,11 @@
+<div *ngIf="genres.length==0">
+    <img class="text-center" width="300" src="https://cdn.pixabay.com/animation/2022/10/11/03/16/03-16-39-160_512.gif" alt="NoMovies">
+</div>
+<div class="btnAdd">
+    <button  mat-icon-button routerLink="/add-genre">
+        <mat-icon>add</mat-icon>
+    </button>
+    </div>
+<div class="card-grid">
+    <app-genre-card *ngFor="let g of genres" [genre]="g"></app-genre-card>
+</div>
